@@ -15,6 +15,7 @@ export const routes: Routes = [
     component: UserTasksComponent,
     children: userRoutes,
     data: {message: 'Hello!'},
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
     resolve: {
       'userName': resolveUserName
     }
