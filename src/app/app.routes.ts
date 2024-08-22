@@ -5,6 +5,7 @@ import {NotFoundComponent} from "./not-found/not-found.component";
 
 import {routes as userRoutes} from "./users/users.routes";
 import {inject} from "@angular/core";
+import {canLeavePage, NewTaskComponent} from "./tasks/new-task/new-task.component";
 
 
 const dummyCanMatch : CanMatchFn = (route, segments) => {
@@ -38,5 +39,10 @@ export const routes: Routes = [
   {
     path: '**',
     component: NotFoundComponent
+  },
+  {
+    path: 'tasks/new',
+    component: NewTaskComponent,
+    canDeactivate: [canLeavePage]
   }
 ];
