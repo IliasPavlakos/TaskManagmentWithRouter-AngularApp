@@ -1,7 +1,7 @@
 import { Component, computed, input } from '@angular/core';
 
 import { type User } from './user.model';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @Component({
   selector: 'app-user',
@@ -9,7 +9,8 @@ import {RouterLink} from "@angular/router";
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
   imports: [
-    RouterLink
+    RouterLink,
+    RouterLinkActive
   ]
 })
 export class UserComponent {
