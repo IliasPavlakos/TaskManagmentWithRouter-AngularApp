@@ -1,9 +1,9 @@
-import { Component, inject, input } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import {Component, inject, input} from '@angular/core';
+import {DatePipe} from '@angular/common';
 
-import { type Task } from './task.model';
-import { CardComponent } from '../../shared/card/card.component';
-import { TasksService } from '../tasks.service';
+import {type Task} from './task.model';
+import {CardComponent} from '../../shared/card/card.component';
+import {TasksService} from '../tasks.service';
 import {RouterLink} from "@angular/router";
 
 @Component({
@@ -15,6 +15,7 @@ import {RouterLink} from "@angular/router";
 })
 export class TaskComponent {
   task = input.required<Task>();
+
   private tasksService = inject(TasksService);
 
   onComplete() {
